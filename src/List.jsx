@@ -79,7 +79,7 @@ const Grid = (url) => {
       />
       <div className="flex bg-gray-200">
         <div className="p-2 font-semibold w-24">Select</div>
-        <div className="p-2 font-semibold w-24">Name</div>
+        <div className="p-2 font-semibold w-32">Name</div>
         <div className="p-2 font-semibold w-24">
           Price
           <Button clickHandler={sortItemsOnPrice} buttonLabel="sort" />

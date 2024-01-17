@@ -15,11 +15,11 @@ const ListItem = ({product,selectItemHandler,deleteItemHandler}) => {
     }
 
     const createList = () => {
-        return <li className={`flex py-2 border-b-2 ${isItemSelected ? 'bg-red-200' : ''}`} key={product.id}>
+        return <li className={`flex p-2 border-b-2 ${isItemSelected ? 'bg-red-200' : ''}`} key={product.id}>
             <div className="w-24 ">
                <Input type="checkbox" selectHandler={(e) => selectItem(e,product)} /> 
                </div>
-               <div className="w-24">
+               <div className="w-32">
                <h2 >{product.name}</h2> 
                </div>
                <div className="w-24">
