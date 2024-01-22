@@ -11,7 +11,7 @@ const TEST_DATA = [
   { name: "product five", id: 5, price: 890 },
 ];
 
-const Grid = (url) => {
+const Grid = () => {
   const [productsList, setProductsList] = useState(TEST_DATA);
   const [selectedItems, setSelectedItems] = useState([]);
   const [isSorted, setIsSorted] = useState(false);
@@ -85,7 +85,7 @@ const Grid = (url) => {
         </div>
         <div className="p-2 font-semibold w-24">Actions</div>
       </div>
-      <ul>{createGrid()}</ul>
+      <ul>{productsList && createGrid()}</ul>
     </section>
   );
 };
