@@ -33,12 +33,10 @@ const Grid = (url) => {
   };
 
   const deleteItemHandler = (product) => {
-    
     const updatedSelectedItems = selectedItems.filter(
       (item) => item.id !== product.id
     );
     setSelectedItems(updatedSelectedItems);
-
 
     const updatedProductsList = productsList.filter(
       (item) => item.id !== product.id
@@ -61,7 +59,8 @@ const Grid = (url) => {
   const createGrid = () => {
     return productsList.map((product) => {
       return (
-        <ListItem key={product.id}
+        <ListItem
+          key={product.id}
           product={product}
           selectItemHandler={selectItemHandler}
           deleteItemHandler={deleteItemHandler}
@@ -71,7 +70,7 @@ const Grid = (url) => {
   };
 
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto mt-2">
       <Search
         searchHandler={searchHandler}
         placeholder="Search..."
